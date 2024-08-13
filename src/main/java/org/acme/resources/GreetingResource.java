@@ -1,6 +1,6 @@
 package org.acme.resources;
 
-import org.acme.MyAIService;
+import org.acme.services.MyAIService;
 
 import jakarta.inject.Inject;
 import jakarta.ws.rs.*;
@@ -16,7 +16,7 @@ public class GreetingResource {
   @Produces(MediaType.TEXT_PLAIN)
   @Consumes(MediaType.TEXT_PLAIN)
   public String hello(String body) {
-    return myAIService.chat(body);
+    return myAIService.chat(1, body);
   }
 
 }
